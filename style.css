@@ -48,6 +48,7 @@ header {
 
 .header > button:hover {
     background-color: #e66060;
+    cursor: pointer;
 }
 
 .search-container {
@@ -112,6 +113,7 @@ header {
 
 .sidebar li:hover {
     background-color: #e66060;
+    cursor: pointer;
 }
 
 
@@ -137,21 +139,53 @@ header {
 }
 
 .card {
+    position: relative;
     background-color: var(--white);
     border: 1px solid #ddd;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-left: 3px solid orange;
+    padding-right: 40px;
 }
 
 
-.card::after {
-    content: '';
+.card-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.card-icons button {
+    border: none;
+    background-color: var(--white);
+}
+.card-icons button:hover {
+    background-color: #dedede;
+    cursor: pointer;
+}
+
+.card-icons .icon {
     width: 20px;
     height: 20px;
-    background: url(images/heart-outline.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
+.icon-heart {
+    background-image: url(images/heart-outline.svg);
+}
+
+.icon-share {
+    background-image: url(images/share-outline.svg);
+}
+
+.icon-eye {
+    background-image: url(images/eye-plus-outline.svg);
+}
+
 
 .card h3 {
     margin-bottom: 0.5rem;
@@ -195,7 +229,7 @@ header {
 }
 
 .trending li:hover {
-    background-color: #e0e0e0;
+    background-color: #dedede;
 }
 
 .sidebar header {
